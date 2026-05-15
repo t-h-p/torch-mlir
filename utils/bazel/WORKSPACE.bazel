@@ -31,6 +31,14 @@ load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
 
 bazel_skylib_workspace()
 
+http_archive(
+    name = "rules_cc",
+    strip_prefix = "rules_cc-0.2.18",
+    urls = [
+        "https://github.com/bazelbuild/rules_cc/releases/download/0.2.18/rules_cc-0.2.18.tar.gz",
+    ],
+)
+
 # This is a transitive dependency from the MLIR Bazel overlay.
 http_archive(
     name = "rules_python",
